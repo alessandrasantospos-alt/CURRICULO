@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Currículo profissional — Logística, Estoque e Armazenagem">
-  <title>Alessandra|Currículo</title>
+  <meta name="description" content="Alessandra Santos — Gerente de Logística e Operações. Especialista em Supply Chain, Estoque e Armazenagem.">
+  <title>Alessandra Santos | Logística & Supply Chain</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
@@ -18,139 +18,156 @@
   </script>
 </head>
 <body>
-  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="overlay" id="overlay"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#perfil" class="nav-brand" aria-label="Alessandra Santos — início">
+        <span class="nav-brand-mark">AS</span>
+        <span class="nav-brand-text">Alessandra Santos</span>
+      </a>
 
-  <div class="cv-layout">
-    <!-- Sidebar — Contato, Competências, Idiomas -->
-    <aside class="sidebar" id="sidebar">
-      <nav class="sidebar-nav">
-        <a href="#perfil" class="nav-link active"><i class="fas fa-user"></i> Perfil</a>
-        <a href="#experiencia" class="nav-link"><i class="fas fa-briefcase"></i> Experiência</a>
-        <a href="#formacao" class="nav-link"><i class="fas fa-graduation-cap"></i> Formação</a>
-        <a href="#projetos" class="nav-link"><i class="fas fa-warehouse"></i> Projetos</a>
+      <nav class="nav-menu" id="navMenu" aria-label="Navegação principal">
+        <a href="#perfil" class="nav-link active">Perfil</a>
+        <a href="#experiencia" class="nav-link">Experiência</a>
+        <a href="#formacao" class="nav-link">Formação</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contato" class="nav-link">Contato</a>
       </nav>
 
-      <div class="sidebar-block">
-        <h2 class="section-label">Contato</h2>
-        <div class="contact-cards">
-          <div class="contact-card">
-            <span class="contact-icon"><i class="fas fa-phone"></i></span>
-            <div class="contact-info">
-              <span class="contact-label">Telefone</span>
-              <a href="tel:+5511973183219" class="contact-value">(11) 97318-3219</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-            <div class="contact-info">
-              <span class="contact-label">E-mail</span>
-              <a href="mailto:praaleoliveira@hotmail.com" class="contact-value">praaleoliveira@hotmail.com</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
-            <div class="contact-info">
-              <span class="contact-label">LinkedIn</span>
-              <a href="https://linkedin.com/in/alessandra-santos-35971914a" target="_blank" rel="noopener noreferrer" class="contact-value">/in/alessandra-santos</a>
-            </div>
-          </div>
-          <div class="contact-card">
-            <span class="contact-icon"><i class="fas fa-location-dot"></i></span>
-            <div class="contact-info">
-              <span class="contact-label">Localização</span>
-              <span class="contact-value">São Paulo, SP</span>
-            </div>
-          </div>
-        </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+          <i class="fas fa-sun theme-icon-light"></i>
+          <i class="fas fa-moon theme-icon-dark"></i>
+        </button>
+        <a href="#contato" class="btn btn--primary btn--nav">Fale comigo</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
+    </div>
+  </header>
 
-      <div class="sidebar-block">
-        <h2 class="section-label">Competências</h2>
-        <div class="skill-badges">
-          <span class="skill-badge">Logística & Supply Chain</span>
-          <span class="skill-badge">Logística Reversa</span>
-          <span class="skill-badge">Gestão de Estoque</span>
-          <span class="skill-badge">Armazenagem & WMS</span>
-          <span class="skill-badge">Gestão da Qualidade</span>
-          <span class="skill-badge">Power BI & Excel</span>
-          <span class="skill-badge">Indicadores & SLA</span>
-          <span class="skill-badge">Liderança de Equipes</span>
-        </div>
-      </div>
+  <div class="overlay" id="overlay"></div>
 
-      <div class="sidebar-block" id="idiomas">
-        <h2 class="section-label">Idiomas</h2>
-        <div class="lang-item">
-          <div class="lang-header">
-            <span>Português</span>
-            <span class="lang-level">Fluente</span>
-          </div>
-          <div class="progress-bar"><div class="progress-fill" data-progress="100"></div></div>
-        </div>
-        <div class="lang-item">
-          <div class="lang-header">
-            <span>Espanhol</span>
-            <span class="lang-level">Básico</span>
-          </div>
-          <div class="progress-bar"><div class="progress-fill" data-progress="35"></div></div>
-        </div>
-      </div>
-
-      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-        <i class="fas fa-sun theme-icon-light"></i>
-        <i class="fas fa-moon theme-icon-dark"></i>
-        <span class="theme-label"></span>
-      </button>
-    </aside>
-
-    <!-- Área principal -->
-    <main class="main-panel">
-      <header class="cv-header" id="perfil">
-        <div class="cv-header-text reveal">
-          <h1 class="cv-name">
-            <span class="name-primary">Alessandra</span>
-            <span class="name-primary">Santos</span>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="perfil">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="hero-eyebrow">Gerente de Logística e Operações</span>
+          <h1 class="hero-title">
+            Transformo operações em
+            <span class="hero-highlight">fluxos eficientes</span>
           </h1>
-          <p class="cv-role">Gerente de Logística e Operações</p>
-          <p class="cv-subrole">Especialista em Distribuição e Supply Chain · Gestão da Qualidade · MBA em Logística e Operações</p>
-        </div>
-        <div class="cv-header-actions reveal">
-          <div class="cv-photo">
-            <div class="photo-frame">
-              <img src="Foto.jpg" alt="Alessandra Santos" class="cv-photo-img">
+          <p class="hero-lead">
+            Especialista em Distribuição e Supply Chain · Gestão da Qualidade · MBA em Logística e Operações. Cada produto no lugar certo faz a diferença.
+          </p>
+          <div class="hero-cta">
+            <a href="#contato" class="btn btn--primary">
+              <i class="fas fa-paper-plane"></i> Entrar em contato
+            </a>
+            <button class="btn btn--secondary" onclick="window.print()" type="button">
+              <i class="fas fa-download"></i> Exportar CV
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">8+</span>
+              <span class="stat-label">Anos de experiência</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">97%</span>
+              <span class="stat-label">Fill rate alcançado</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Formações acadêmicas</span>
             </div>
           </div>
-          <button class="btn btn--secondary" onclick="window.print()" type="button">
-            <i class="fas fa-download"></i> Exportar CV
-          </button>
         </div>
-      </header>
+        <div class="hero-visual reveal">
+          <div class="photo-frame">
+            <img src="Foto.jpg" alt="Alessandra Santos" class="cv-photo-img">
+          </div>
+          <div class="hero-badge">
+            <i class="fas fa-location-dot"></i>
+            São Paulo, SP
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="content-section reveal" id="objetivo">
-        <div class="section-head">
-          <span class="section-icon"><i class="fas fa-bullseye"></i></span>
-          <h2 class="section-title">Objetivo</h2>
+    <!-- Objetivo -->
+    <section class="section section--alt" id="objetivo">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-eyebrow">Sobre mim</span>
+          <h2 class="section-title">Logística com propósito e resultado</h2>
         </div>
-        <blockquote class="objective-quote">
+        <blockquote class="objective-quote reveal">
           "Transformar desafios operacionais em fluxos eficientes — porque cada produto no lugar certo faz a diferença."
         </blockquote>
-        <div class="skill-badges skill-badges--inline">
+        <div class="skill-badges skill-badges--inline reveal">
           <span class="skill-badge"><i class="fas fa-truck"></i> Logística</span>
           <span class="skill-badge"><i class="fas fa-boxes-stacked"></i> Estoque</span>
           <span class="skill-badge"><i class="fas fa-warehouse"></i> Armazenagem</span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="content-section reveal" id="experiencia">
-        <div class="section-head">
-          <span class="section-icon"><i class="fas fa-briefcase"></i></span>
+    <!-- Competências -->
+    <section class="section" id="competencias">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-eyebrow">Competências</span>
+          <h2 class="section-title">O que eu entrego</h2>
+          <p class="section-desc">Domínio técnico e liderança em toda a cadeia logística — do estoque à entrega final.</p>
+        </div>
+        <div class="skills-grid reveal">
+          <article class="skill-card">
+            <span class="skill-card-icon"><i class="fas fa-truck-fast"></i></span>
+            <h3>Logística & Supply Chain</h3>
+            <p>Planejamento, distribuição e otimização de toda a cadeia de suprimentos.</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-icon"><i class="fas fa-rotate-left"></i></span>
+            <h3>Logística Reversa</h3>
+            <p>Recebimento, triagem, devoluções e destinação com qualidade e conformidade.</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-icon"><i class="fas fa-boxes-stacked"></i></span>
+            <h3>Gestão de Estoque</h3>
+            <p>Curva ABC, políticas de reposição e redução de capital imobilizado.</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-icon"><i class="fas fa-warehouse"></i></span>
+            <h3>Armazenagem & WMS</h3>
+            <p>Layout, picking, inventário cíclico e integração com sistemas.</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-icon"><i class="fas fa-shield-halved"></i></span>
+            <h3>Gestão da Qualidade</h3>
+            <p>Auditorias, padronização de processos e melhoria contínua.</p>
+          </article>
+          <article class="skill-card">
+            <span class="skill-card-icon"><i class="fas fa-chart-line"></i></span>
+            <h3>Power BI & Indicadores</h3>
+            <p>Dashboards, SLA, OTIF e análises para decisões estratégicas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiência -->
+    <section class="section section--alt" id="experiencia">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-eyebrow">Trajetória</span>
           <h2 class="section-title">Experiência Profissional</h2>
+          <p class="section-desc">Mais de 8 anos liderando operações, qualidade e logística em empresas de diferentes portes.</p>
         </div>
 
-        <div class="exp-timeline">
+        <div class="exp-timeline reveal">
           <article class="exp-item exp-item--current">
             <div class="exp-node" aria-hidden="true"></div>
             <div class="exp-card">
@@ -213,58 +230,68 @@
             </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="content-section reveal" id="formacao">
-        <div class="section-head">
-          <span class="section-icon"><i class="fas fa-graduation-cap"></i></span>
+    <!-- Formação -->
+    <section class="section" id="formacao">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-eyebrow">Formação</span>
           <h2 class="section-title">Formação Acadêmica</h2>
+          <p class="section-desc">Educação contínua em logística, qualidade e tecnologia aplicada às operações.</p>
         </div>
 
-        <article class="edu-item">
-          <div class="edu-header">
-            <h3 class="edu-title">Estratégia e Desenvolvimento de Soluções de IA</h3>
-            <span class="edu-period">Ago 2026 — Ago 2027</span>
-          </div>
-          <p class="edu-school">Universidade Anhanguera São Paulo · Pós-Graduação</p>
-          <p class="edu-desc">Computer/Information Technology Administration and Management</p>
-        </article>
+        <div class="edu-grid reveal">
+          <article class="edu-item">
+            <div class="edu-header">
+              <h3 class="edu-title">Estratégia e Desenvolvimento de Soluções de IA</h3>
+              <span class="edu-period">Ago 2026 — Ago 2027</span>
+            </div>
+            <p class="edu-school">Universidade Anhanguera São Paulo · Pós-Graduação</p>
+            <p class="edu-desc">Computer/Information Technology Administration and Management</p>
+          </article>
 
-        <article class="edu-item">
-          <div class="edu-header">
-            <h3 class="edu-title">MBA Logística e Operações</h3>
-            <span class="edu-period">Jan 2026 — Jul 2026</span>
-          </div>
-          <p class="edu-school">Universidade de Marília (UNIMAR)</p>
-          <p class="edu-desc">Logistics, Materials, and Supply Chain Management</p>
-        </article>
+          <article class="edu-item">
+            <div class="edu-header">
+              <h3 class="edu-title">MBA Logística e Operações</h3>
+              <span class="edu-period">Jan 2026 — Jul 2026</span>
+            </div>
+            <p class="edu-school">Universidade de Marília (UNIMAR)</p>
+            <p class="edu-desc">Logistics, Materials, and Supply Chain Management</p>
+          </article>
 
-        <article class="edu-item">
-          <div class="edu-header">
-            <h3 class="edu-title">Gestão de Qualidade</h3>
-            <span class="edu-period">Jul 2023 — Jul 2025</span>
-          </div>
-          <p class="edu-school">Universidade de Marília (UNIMAR) · Graduação</p>
-          <p class="edu-desc">Sistemas de gestão, indicadores, auditoria e melhoria contínua</p>
-        </article>
+          <article class="edu-item">
+            <div class="edu-header">
+              <h3 class="edu-title">Gestão de Qualidade</h3>
+              <span class="edu-period">Jul 2023 — Jul 2025</span>
+            </div>
+            <p class="edu-school">Universidade de Marília (UNIMAR) · Graduação</p>
+            <p class="edu-desc">Sistemas de gestão, indicadores, auditoria e melhoria contínua</p>
+          </article>
 
-        <article class="edu-item">
-          <div class="edu-header">
-            <h3 class="edu-title">Administração de Empresas</h3>
-            <span class="edu-period">2007 — 2010</span>
-          </div>
-          <p class="edu-school">Universidade Estadual do Tocantins (UEST) · Graduação</p>
-          <p class="edu-desc">Business Administration and Management, General</p>
-        </article>
-      </section>
+          <article class="edu-item">
+            <div class="edu-header">
+              <h3 class="edu-title">Administração de Empresas</h3>
+              <span class="edu-period">2007 — 2010</span>
+            </div>
+            <p class="edu-school">Universidade Estadual do Tocantins (UEST) · Graduação</p>
+            <p class="edu-desc">Business Administration and Management, General</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section class="content-section reveal" id="projetos">
-        <div class="section-head">
-          <span class="section-icon"><i class="fas fa-warehouse"></i></span>
-          <h2 class="section-title">Projetos — Logística, Estoque & Armazenagem</h2>
+    <!-- Projetos -->
+    <section class="section section--alt" id="projetos">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="section-eyebrow">Portfólio</span>
+          <h2 class="section-title">Projetos em Logística, Estoque & Armazenagem</h2>
+          <p class="section-desc">Resultados mensuráveis em otimização operacional, tecnologia e gestão de processos.</p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid reveal">
           <article class="project-card">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=340&fit=crop" alt="Centro de distribuição">
@@ -325,13 +352,83 @@
             </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="footer">
-        <p>&copy; <span id="year"></span> Alessandra Santos · Logística & Supply Chain</p>
-      </footer>
-    </main>
-  </div>
+    <!-- Contato CTA -->
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-grid reveal">
+          <div class="contact-intro">
+            <span class="section-eyebrow section-eyebrow--light">Contato</span>
+            <h2 class="section-title section-title--light">Vamos conversar?</h2>
+            <p class="contact-lead">Disponível para oportunidades em logística, operações e supply chain. Entre em contato por qualquer canal abaixo.</p>
+
+            <div class="lang-block" id="idiomas">
+              <h3 class="lang-title">Idiomas</h3>
+              <div class="lang-item">
+                <div class="lang-header">
+                  <span>Português</span>
+                  <span class="lang-level">Fluente</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" data-progress="100"></div></div>
+              </div>
+              <div class="lang-item">
+                <div class="lang-header">
+                  <span>Espanhol</span>
+                  <span class="lang-level">Básico</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill" data-progress="35"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-cards">
+            <a href="tel:+5511973183219" class="contact-card">
+              <span class="contact-icon"><i class="fas fa-phone"></i></span>
+              <div class="contact-info">
+                <span class="contact-label">Telefone</span>
+                <span class="contact-value">(11) 97318-3219</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <a href="mailto:praaleoliveira@hotmail.com" class="contact-card">
+              <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+              <div class="contact-info">
+                <span class="contact-label">E-mail</span>
+                <span class="contact-value">praaleoliveira@hotmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <a href="https://linkedin.com/in/alessandra-santos-35971914a" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
+              <div class="contact-info">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">/in/alessandra-santos</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <div class="contact-card contact-card--static">
+              <span class="contact-icon"><i class="fas fa-location-dot"></i></span>
+              <div class="contact-info">
+                <span class="contact-label">Localização</span>
+                <span class="contact-value">São Paulo, SP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Alessandra Santos · Logística & Supply Chain</p>
+      <button class="btn btn--ghost" onclick="window.print()" type="button">
+        <i class="fas fa-download"></i> Baixar CV
+      </button>
+    </div>
+  </footer>
 
   <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
     <i class="fas fa-arrow-up"></i>

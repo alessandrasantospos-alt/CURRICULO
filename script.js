@@ -1,9 +1,10 @@
 /**
- * Currículo — Interatividade
+ * Landing Page — Interatividade
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
+  initHeaderScroll();
   initScrollReveal();
   initProgressBars();
   initBackToTop();
@@ -14,24 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initNavigation() {
   const menuToggle = document.getElementById('menuToggle');
-  const sidebar = document.getElementById('sidebar');
+  const navMenu = document.getElementById('navMenu');
   const overlay = document.getElementById('overlay');
   const navLinks = document.querySelectorAll('.nav-link');
 
   function closeMenu() {
-    sidebar?.classList.remove('open');
+    navMenu?.classList.remove('open');
     overlay?.classList.remove('active');
+    menuToggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
   function openMenu() {
-    sidebar?.classList.add('open');
+    navMenu?.classList.add('open');
     overlay?.classList.add('active');
+    menuToggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
 
   menuToggle?.addEventListener('click', () => {
-    sidebar?.classList.contains('open') ? closeMenu() : openMenu();
+    navMenu?.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   overlay?.addEventListener('click', closeMenu);
@@ -41,6 +44,18 @@ function initNavigation() {
       if (window.innerWidth <= 960) closeMenu();
     });
   });
+}
+
+function initHeaderScroll() {
+  const header = document.getElementById('siteHeader');
+  if (!header) return;
+
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  };
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 function initScrollReveal() {
@@ -92,9 +107,8 @@ function initBackToTop() {
 }
 
 function initActiveNavHighlight() {
-  const sections = document.querySelectorAll('[id]');
   const navLinks = document.querySelectorAll('.nav-link');
-  const ids = ['perfil', 'experiencia', 'formacao', 'projetos'];
+  const ids = ['perfil', 'experiencia', 'formacao', 'projetos', 'contato'];
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -106,7 +120,7 @@ function initActiveNavHighlight() {
         }
       });
     },
-    { threshold: 0.25, rootMargin: '-60px 0px -55% 0px' }
+    { threshold: 0.2, rootMargin: '-80px 0px -55% 0px' }
   );
 
   ids.forEach(id => {
