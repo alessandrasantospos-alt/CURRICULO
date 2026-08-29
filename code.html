@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alex Mercer - Mobile CV</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#001818",
+                        "on-tertiary-container": "#3a9f9e",
+                        "surface-container": "#e5eeff",
+                        "on-error-container": "#93000a",
+                        "outline": "#74777d",
+                        "outline-variant": "#c4c6cd",
+                        "inverse-primary": "#b7c8de",
+                        "background": "#f8f9ff",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#1a2b3c",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "primary-fixed-dim": "#b7c8de",
+                        "on-primary-container": "#8192a7",
+                        "on-secondary-container": "#5d2300",
+                        "primary-fixed": "#d2e4fb",
+                        "on-tertiary-fixed": "#002020",
+                        "secondary-fixed": "#ffdbcb",
+                        "on-background": "#0b1c30",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container-high": "#dce9ff",
+                        "secondary": "#a04100",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#341000",
+                        "on-secondary-fixed-variant": "#7a3000",
+                        "surface": "#f8f9ff",
+                        "surface-tint": "#4f6073",
+                        "tertiary-container": "#002f2f",
+                        "on-primary-fixed-variant": "#38485a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fc7728",
+                        "on-surface-variant": "#44474c",
+                        "on-primary-fixed": "#0b1d2d",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-variant": "#d3e4fe",
+                        "secondary-fixed-dim": "#ffb693",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "inverse-surface": "#213145",
+                        "on-tertiary-fixed-variant": "#004f4f",
+                        "tertiary-fixed-dim": "#76d6d5",
+                        "tertiary-fixed": "#93f2f2",
+                        "primary": "#041627"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "element-gap": "12px",
+                        "unit": "4px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "section-gap": "40px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-sm pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-primary-container docked full-width top-0 sticky z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto py-unit h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">account_circle</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Alex Mercer</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-caps text-label-caps hover:bg-surface-container-low dark:hover:bg-primary transition-colors duration-200 active:scale-95">Download CV</button>
+</div>
+</header>
+<!-- Navigation Drawer (Desktop Hidden, Mobile Hidden, just defining structure if needed, but per instructions, mobile focus) -->
+<main class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap space-y-section-gap">
+<!-- Profile & Summary Section -->
+<section class="animate-fade-up flex flex-col items-center text-center space-y-element-gap">
+<div class="w-32 h-32 rounded-full overflow-hidden border-2 border-outline-variant relative">
+<img class="object-cover w-full h-full" data-alt="A professional headshot of a logistics specialist, 30s, looking confidently at the camera, wearing smart business casual attire. Clean, bright corporate lighting, shallow depth of field. Soft, modern office background. High quality, photorealistic, evoking trust and efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjcXuUISrwqZ8OW-fbqmu9NEbClpn-8QypywedJJhdEQ2d8an1UX9ccrn16K2Ia6AjInAbXUBmDm5hJbZGfJwfj-4ny6fUSlRsN4CGzWfe8IV1Cl8o8aXLAJTLOo0l0J84S7lXh0ciOiTZEyHi6KHakGLzIS3poydRLlyC-FT2kNJF8vkL9WIaC2LIbK8sMaVOwXgKrKY7MGkJ8CVeMOWXAqHX6UiCu-ni8vxwXKuXbiIugfGGaJdAjw"/>
+</div>
+<div>
+<h1 class="font-headline-md-mobile text-headline-md-mobile md:font-headline-md md:text-headline-md text-primary">Alex Mercer</h1>
+<p class="font-headline-sm text-headline-sm text-secondary mt-1">Logistics Specialist</p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-4">
+                Results-driven logistics professional with over 10 years of experience in supply chain optimization, route planning, and cost reduction strategies. Proven track record in orchestrating global freight operations and improving operational efficiency in high-pressure environments.
+            </p>
+</section>
+<!-- Contact Cards -->
+<section class="animate-fade-up delay-100 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Email</div>
+<div class="font-body-sm text-body-sm">alex.mercer@logistics.com</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Phone</div>
+<div class="font-body-sm text-body-sm">+1 (555) 019-8372</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Location</div>
+<div class="font-body-sm text-body-sm">Seattle, WA</div>
+</div>
+</div>
+<div class="flex items-center gap-3 p-4 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary">link</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">LinkedIn</div>
+<div class="font-body-sm text-body-sm">/in/alexmercer-logistics</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="animate-fade-up delay-200">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6 flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined">precision_manufacturing</span> Skills
+            </h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-tertiary-container/5 border border-tertiary-fixed-dim rounded-lg p-4 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">warehouse</span>
+<span class="font-label-caps text-label-caps text-tertiary-container">Warehouse Management</span>
+</div>
+<div class="bg-tertiary-container/5 border border-tertiary-fixed-dim rounded-lg p-4 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-label-caps text-label-caps text-tertiary-container">Fleet Logistics</span>
+</div>
+<div class="bg-tertiary-container/5 border border-tertiary-fixed-dim rounded-lg p-4 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-label-caps text-label-caps text-tertiary-container">Global Sourcing</span>
+</div>
+<div class="bg-tertiary-container/5 border border-tertiary-fixed-dim rounded-lg p-4 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-label-caps text-label-caps text-tertiary-container">Inventory Control</span>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="animate-fade-up delay-300">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6 flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined">timeline</span> Experience
+            </h2>
+<div class="relative border-l-2 border-outline-variant ml-3 space-y-8">
+<!-- Role 1 -->
+<div class="relative pl-8">
+<div class="absolute w-3 h-3 bg-secondary rounded-full -left-[7px] top-1.5 shadow-sm"></div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:shadow-sm transition-shadow">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Senior Logistics Coordinator</h3>
+<span class="font-label-caps text-label-caps text-secondary bg-secondary-container/10 px-2 py-1 rounded">2018 - Present</span>
+</div>
+<h4 class="font-body-sm text-body-sm text-on-surface-variant font-semibold mb-3">Global Freight Solutions</h4>
+<ul class="list-disc list-inside font-body-sm text-body-sm text-on-surface space-y-1">
+<li>Reduced shipping costs by 15% through strategic route optimization and carrier negotiations.</li>
+<li>Implemented an automated tracking system improving delivery transparency by 30%.</li>
+<li>Managed a team of 12 dispatchers handling daily cross-border freight operations.</li>
+</ul>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="relative pl-8">
+<div class="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5 shadow-sm"></div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:shadow-sm transition-shadow">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start gap-1 mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Operations Supervisor</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">2014 - 2018</span>
+</div>
+<h4 class="font-body-sm text-body-sm text-on-surface-variant font-semibold mb-3">SpeedLine Logistics</h4>
+<ul class="list-disc list-inside font-body-sm text-body-sm text-on-surface space-y-1">
+<li>Oversaw daily warehouse operations, ensuring 99% accuracy in order fulfillment.</li>
+<li>Trained and onboarded over 50 new warehouse personnel on safety protocols.</li>
+<li>Streamlined inventory audit processes, saving 20 labor hours per month.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="animate-fade-up delay-400">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6 flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined">school</span> Education
+            </h2>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 flex items-start gap-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-[32px]">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">B.S. in Supply Chain Management</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">State University</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">Graduated: 2014</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-primary-container fixed full-width bottom-0 z-50 md:hidden border-t border-outline-variant dark:border-outline shadow-sm h-16 w-full">
+<div class="flex justify-around items-center h-full max-w-md mx-auto">
+<!-- Profile Tab (Active) -->
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed bg-secondary-container/10 rounded-xl px-3 py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-all scale-90 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</button>
+<!-- Experience Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-all">
+<span class="material-symbols-outlined">timeline</span>
+<span class="font-label-caps text-label-caps mt-1">Experience</span>
+</button>
+<!-- Skills Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-all">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-caps text-label-caps mt-1">Skills</span>
+</button>
+<!-- Contact Tab (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container px-3 py-1 hover:text-secondary dark:hover:text-secondary-fixed transition-all">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-caps text-label-caps mt-1">Contact</span>
+</button>
+</div>
+</nav>
+</body></html>
