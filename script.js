@@ -108,7 +108,7 @@ function initBackToTop() {
 
 function initActiveNavHighlight() {
   const navLinks = document.querySelectorAll('.nav-link');
-  const ids = ['perfil', 'experiencia', 'formacao', 'contato'];
+  const ids = ['perfil', 'experiencia', 'formacao', 'projetos', 'contato'];
 
   const observer = new IntersectionObserver(
     (entries) => {
